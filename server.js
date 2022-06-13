@@ -23,7 +23,8 @@ db.on("error", (err) => console.log(err.message + " is Mongod not running?"));
 db.on("connected", () => console.log("mongo connected: "));
 db.on("disconnected", () => console.log("mongo disconnected"));
 
-app.get("/", (req, res) => {
+//ROUTES
+app.get("/api", (req, res) => {
   res.send("Hello World");
 });
 
