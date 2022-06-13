@@ -3,6 +3,7 @@
 GA unit 3 MERN stack app exercise
 
 - git init + gitignore
+
 - Express Hello World
   - express
   - nodemon

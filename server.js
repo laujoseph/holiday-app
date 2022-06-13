@@ -8,6 +8,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 const mongoURI = process.env.MONGODB_URI || "mongodb://127.0.0.1/product";
 const PORT = process.env.PORT;
+
+app.use(express.static("./frontend/dist"));
+
 mongoose.connect(
   mongoURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
