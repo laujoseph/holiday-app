@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const path = require("path");
 const app = express();
 const mongoose = require("mongoose");
 const db = mongoose.connection;
@@ -28,6 +29,9 @@ app.get("/api", (req, res) => {
   res.send("Hello World");
 });
 
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./frontend/dist/index.html"));
+});
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
